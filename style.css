@@ -1,0 +1,332 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin:0px; 
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #F2F2F2;
+  font-family: 'Muli', sans-serif;
+}
+h1,h2,h3{
+  font-family: 'Lora',serif;
+}
+a{
+  text-decoration: none;
+  color:gray;
+}
+a:hover{
+  color:lightgray;
+}
+p{
+  font-size:13px;
+}
+.area-header,.area-footer{
+  color:white;
+}
+.area-header {
+  grid-area: header;
+  background-color:#19191b;
+}
+.area-header-content{
+  width: 85%;
+  margin: auto;
+  padding-top: 50px;
+}
+.header-logo{
+  margin:auto;
+  display:block;
+}
+.title{
+  background: url("./images/logo.png") no-repeat; 
+  background-position: top center;
+  margin:30px 0px;
+  background-size:contain;
+  display:flex;
+  justify-content: space-between;
+  align-content: center;
+  height:30px;
+}
+.title *{
+  margin: auto 0px;
+}
+.navigation{
+  text-align: center;
+  margin:10px 0px;
+  padding:20px 0px 30px 0px;
+  border-top:1px rgb(122, 114, 113,0.3) solid;
+  font-size:13px;
+  color:#656565;
+}
+.navigation a{
+  padding:0px 20px;
+}
+.button-link{
+  background-color:#01aef0;
+  color:white;
+  padding:5px 10px;
+}
+.flex-padding-new .button-link{
+  background-color:#679a23;
+  color:white;
+  padding:5px 10px;
+}
+.featured{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+  'featured-photo featured-new-1' 
+  'featured-photo featured-new-2';
+}
+.flex-padding{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding:30px;
+}
+.flex-padding-new{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding:20px;
+}
+.featured-photo{
+  grid-area:featured-photo;
+  background-color:lightcoral;
+  background-image:url("./images/thumbs/featured/featured-guitarman.jpg");
+  background-size: cover;
+  height:500px;
+}
+.featured-new-1{
+  grid-area:featured-new-1;
+  background-image:url("./images/thumbs/featured/featured-watch.jpg");
+  background-size: cover;
+}
+.featured-new-2{
+  grid-area:featured-new-2;
+  background-image:url("./images/thumbs/featured/featured-beetle.jpg");
+  background-size: cover;
+}
+.subtitle p{
+  display: flex;
+  align-items:center;
+  color:rgba(255, 255, 255, 0.7);
+}
+.subtitle img{
+  height:30px;
+  border-radius:50%;
+  margin-right:10px;
+}
+.area-main{
+  display: grid;
+  grid-template-columns:repeat(8,1fr);
+  grid-template-rows: auto auto;
+  grid-template-areas:
+  ". main-collum-1 main-collum-1 main-collum-2 main-collum-2 main-collum-3 main-collum-3 ."
+  "area-pagination area-pagination area-pagination area-pagination area-pagination area-pagination area-pagination area-pagination";
+  grid-column-gap: 30px;
+  margin:50px 0px;
+}
+.area-main-collum-1 {
+  grid-area: main-collum-1;
+}
+
+.area-main-collum-2 {
+  grid-area: main-collum-2;
+}
+
+.area-main-collum-3 {
+  grid-area: main-collum-3;
+}
+.area-pagination{
+  grid-area: area-pagination;
+  display:flex;
+  align-content: center;
+  justify-content:center;
+  margin:50px 0px 30px 0px;
+}
+.area-pagination img{
+  height: 30px;
+  width: 30px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: rgb(0,0,0,0.5) 1px 1px;
+}
+.area-pagination a{
+  font-weight: bolder;
+  font-size:14px;
+  padding:5px 15px;
+  margin:0px 5px;
+  color:black;
+}
+.area-pagination a:hover{
+  background-color:rgba(0, 0, 0, 0.2)
+}
+.area-pagination a.active{
+  background-color: black;
+  color:white;
+}
+
+.card{ 
+  margin-bottom:20px;
+  background-color: white;
+  box-shadow: 1px 2px 1px rgba(0,0,0,0.1);
+}
+.card-content,.card-quotes{
+  padding:30px 15px;
+}
+.card-content a{
+  color:#0054a5;
+  font-size:13px;
+  padding: 20px 0px;
+}
+.card-content h2+p{
+  color:gray;
+}
+.card-quotes{
+  text-align:center;
+}
+.card-quotes img{
+  opacity: 0.5;
+  max-height: 40px;
+  max-width: 40px;
+}
+.card-quotes p{
+  color:gray;
+}
+.card-img img{
+  max-width: 100%;
+}
+.card .subtitle p{
+  color:gray;
+}
+.card-categories{
+  padding: 10px 0px;
+}
+.area-bottom {
+  grid-area: bottom;
+  background-color:#FFFFFF;
+  padding:50px 0px;
+}
+.area-bottom-container{
+  width: 85%;
+  margin:auto;
+}
+.area-bottom-container>h2{
+  text-align:center;
+}
+.area-bottom-popularpostsabout{
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap:30px;
+}
+.area-bottom-popularposts{
+  grid-column:1/2;
+}
+.area-bottom-about{
+  grid-column:2/3;
+}
+.popular-posts{
+  display:flex;
+  flex-flow: row wrap;
+}
+.popular-posts *{
+  margin:0px;
+}
+.popular-posts img{
+  height:55px;
+  width:55px;
+  margin-right:5px;
+}
+.popular-post{
+  width:50%;
+  display:inherit;
+  padding: 5px 10px 5px 0px;
+  margin: 0px 0px 10px 0px;
+}
+.area-bottom-tags{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 80%;
+  margin: auto;
+}
+.tag{
+  padding:7px 15px;
+  margin: 5px;
+  background-color:#e2e2e2;
+  color:#333333;
+  font-size:13px;
+}
+.tag:hover{
+  background-color:black;
+  color:white;
+}
+.area-footer {
+  grid-area: footer;
+  background-color:#19191b;
+  padding:50px;
+  
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
+  grid-column-gap: 10px;
+}
+.area-footer p{
+  color: rgba(255, 255, 255, 0.4);
+}
+.area-footer h4{
+  padding-bottom:40px;
+  border-bottom:1px solid rgba(255, 255, 255, 0.2);
+}
+.area-footer-quicklinks{
+  grid-column: 1/2;
+}
+.area-footer-archives{
+  grid-column: 2/3;
+}
+.area-footer-social{
+  grid-column: 3/4;
+}
+.area-footer-newsletter{
+  grid-column: 5/6;
+}
+.area-footer-input {
+  display: flex;
+  height: 30px;
+  
+}
+.area-footer input {
+  width: 80%;
+  background-color: #212121;
+  border: none;
+  background-image: url(./images/icons/png/icon-mail.png);
+  background-repeat: no-repeat;
+  background-size: 5%;
+  background-position: center left 5px;
+  padding-left: 30px;
+}
+.send-button{
+  width: 20%;
+  text-align: center;
+  background-color: royalblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.area-footer-copyright{
+  grid-column:1/6;
+  margin-top:20px;
+}
+.area-footer-copyright strong{
+  color:white;
+}
+.clearfix{
+  content: "";
+  display: table;
+  clear: both;
+}
